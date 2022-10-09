@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  rtl-sdr:
+    container_name: rtl-sdr
+    build:
+      dockerfile: dockerfile
+    networks:
+      - rtl-sdr-network
+    tty: true
+    privileged: true
+    devices:
+      - /dev/bus/usb/001/004:/dev/bus/usb/001/001
+networks:
+    rtl-sdr-network:
+        driver: bridge
+
+        
