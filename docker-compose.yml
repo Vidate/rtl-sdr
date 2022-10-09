@@ -6,6 +6,7 @@ services:
     build:
       context: .
       dockerfile: dockerfile
+    restart: always
     networks:
       - rtl-sdr-network
     tty: true
