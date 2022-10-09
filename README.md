@@ -44,3 +44,9 @@ http://dl-cdn.alpinelinux.org/alpine/v3.16/main
 http://dl-cdn.alpinelinux.org/alpine/v3.16/community
 ``` 
 * I'm using v3.16 alpine version (latest)
+
+
+# Build && run docker 
+
+Build ``docker-compose -f docker-compose.yml build --parallel --no-cache``
+Run ``docker-compose -f docker-compose.yml up -d``
