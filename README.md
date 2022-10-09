@@ -46,7 +46,16 @@ http://dl-cdn.alpinelinux.org/alpine/v3.16/community
 * I'm using v3.16 alpine version (latest)
 
 
-# Build && run docker 
+# Build & run docker 
 
 Build ``docker-compose -f docker-compose.yml build --parallel --no-cache``
 Run ``docker-compose -f docker-compose.yml up -d``
+
+# Stop, remove, recreate, start and test commands
+```
+docker stop rtl-sdr
+docker rmi rtl-sdr_rtl-sdr
+docker-compose -f docker-compose.yml build --parallel --no-cache
+docker-compose -f docker-compose.yml up -d
+docker exec rtl-sdr ../bin/rtl_test
+```

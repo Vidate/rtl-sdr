@@ -10,8 +10,8 @@ services:
       - rtl-sdr-network
     tty: true
     privileged: true
-    devices:
-      - /dev/bus/usb/001/004:/dev/bus/usb/001/001
+    ports:
+    - 8001:8001
     
 networks:
     rtl-sdr-network:
