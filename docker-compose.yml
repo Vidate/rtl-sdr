@@ -4,6 +4,7 @@ services:
   rtl-sdr:
     container_name: rtl-sdr
     build:
+      context: .
       dockerfile: dockerfile
     networks:
       - rtl-sdr-network
@@ -11,6 +12,7 @@ services:
     privileged: true
     devices:
       - /dev/bus/usb/001/004:/dev/bus/usb/001/001
+    
 networks:
     rtl-sdr-network:
         driver: bridge
