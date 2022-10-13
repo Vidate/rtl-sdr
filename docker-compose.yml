@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  rtl-sdr:
+    container_name: rtl-sdr
+    build:
+      context: .
+      dockerfile: dockerfile
+    restart: always
+    networks:
+      - rtl-sdr-network
+    tty: true
+    privileged: true
+    ports:
+    - 8001:8001
+    
+networks:
+    rtl-sdr-network:
+        driver: bridge
+
+        
