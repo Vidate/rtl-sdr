@@ -3,7 +3,7 @@
 ## 1. Easy to use docker-compose scripts to run rlt-sdr on docker (alpine linux).
 ## 2. Run on Del Wyse 5070 with DVB-T RTL2832U usb -> connected to dipole antena.
 ## 3. 24/7 rtl_tcp available in local network
-# Hardware 
+# Hardware and devices needed
     Dell Wyse 5070
     DVB-T RTL2832U R820T2 plug into dell wyse
     Dipole antena
