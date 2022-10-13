@@ -16,5 +16,7 @@ RUN make install
 RUN echo '/usr/local/lib' >> /etc/ld.so.conf
 RUN ldconfig /usr/local/lib
 WORKDIR /bin
+
 ENTRYPOINT  [ "rtl_tcp", "-a", "0.0.0.0", "-p", "8001"]
+
 EXPOSE 8001
